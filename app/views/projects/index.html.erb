@@ -3,6 +3,7 @@
 <h1>Listing Projects</h1>
 
 <table>
+  <% if @projects %>
   <thead>
     <tr>
       <th>Name</th>
@@ -11,7 +12,6 @@
   </thead>
 
   <tbody>
-    <% if @projects %>
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
@@ -20,6 +20,8 @@
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <% else %>
+    <h2>You don't have any projects yet</h2>
     <% end %>
   </tbody>
 </table>
@@ -27,6 +29,5 @@
 <br>
 
 
-<% if false %>
+
 <%= link_to 'New Project', new_project_path %>
-<% end %>

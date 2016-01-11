@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
   devise_scope :user do
     authenticated :user do
-      root 'users#index'
+      root 'projects#index'
       # destroy_user_session_path, 'devise/sessions#destroy'
       # delete 'products/:id/purchase' => 'catalog#purchase', as: :purchase
     end
@@ -17,15 +17,35 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
+  resources :users do
+    resources :projects do
+      resources :issues
+    end
+  end
 
-  resources :issues, except: :new
+  # resources :issues
+  #
+  # resources :users
 
-  resources :projects
-
-  resources :projects do
+  authenticate :user do
+    resources :projects
     resources :issues
   end
+
+
+  # this is as it was...
+
+  # resources :users
+  #
+  # resources :issues, except: :new
+  #
+  # resources :projects
+  #
+  # resources :projects do
+  #   resources :issues
+  # end
+
+  # ...
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
