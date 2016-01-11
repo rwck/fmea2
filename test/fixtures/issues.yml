@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  function: MyString
+  failure: MyString
+  effect_of_failure: MyString
+  cause_of_failure: MyString
+  current_controls: MyString
+  recommended_actions: MyString
+  probability_estimate: 1
+  severity_estimate: 1
+  detection_indicators: 1
+  detection_dormancy_period: 1
+  risk_level: 1
+  further_investigation: MyString
+
+two:
+  item: MyString
+  function: MyString
+  failure: MyString
+  effect_of_failure: MyString
+  cause_of_failure: MyString
+  current_controls: MyString
+  recommended_actions: MyString
+  probability_estimate: 1
+  severity_estimate: 1
+  detection_indicators: 1
+  detection_dormancy_period: 1
+  risk_level: 1
+  further_investigation: MyString

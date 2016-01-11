@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @issue.item %>
+</p>
+
+<p>
+  <strong>Function:</strong>
+  <%= @issue.function %>
+</p>
+
+<p>
+  <strong>Failure:</strong>
+  <%= @issue.failure %>
+</p>
+
+<p>
+  <strong>Effect of failure:</strong>
+  <%= @issue.effect_of_failure %>
+</p>
+
+<p>
+  <strong>Cause of failure:</strong>
+  <%= @issue.cause_of_failure %>
+</p>
+
+<p>
+  <strong>Current controls:</strong>
+  <%= @issue.current_controls %>
+</p>
+
+<p>
+  <strong>Recommended actions:</strong>
+  <%= @issue.recommended_actions %>
+</p>
+
+<p>
+  <strong>Probability estimate:</strong>
+  <%= @issue.probability_estimate %>
+</p>
+
+<p>
+  <strong>Severity estimate:</strong>
+  <%= @issue.severity_estimate %>
+</p>
+
+<p>
+  <strong>Detection indicators:</strong>
+  <%= @issue.detection_indicators %>
+</p>
+
+<p>
+  <strong>Detection dormancy period:</strong>
+  <%= @issue.detection_dormancy_period %>
+</p>
+
+<p>
+  <strong>Risk level:</strong>
+  <%= @issue.risk_level %>
+</p>
+
+<p>
+  <strong>Further investigation:</strong>
+  <%= @issue.further_investigation %>
+</p>
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>

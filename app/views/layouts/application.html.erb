@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FMEA</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <% if user_signed_in? %>
+<h4>Signed in as: <%= @user.firstname %> <%= @user.lastname %></h4>
+
+
+<div class="edge">
+
+    <% if !signed_in? && controller_name != 'registrations'%>
+
+      <div class="edge-left">
+        Don't have an account?
+        <%= link_to "Sign up", new_user_registration_path %>
+      </div>
+
+      <% end %>
+
+        <% if !user_signed_in? && controller_name != 'sessions' %>
+        <div class="edge-right">
+          Already signed up?
+          <%= link_to "Log in", new_user_session_path %>
+        </div>
+        <% end %>
+
+
+
+          <% if user_signed_in? %>
+
+            <span class="edge-left">
+
+
+
+
+              <%= current_user.firstname %>
+                <%= current_user.lastname %>
+
+                      <%= link_to "Edit profile", edit_user_path(current_user) %>
+
+            </span>
+
+            <span class="edge-right">
+
+              <%= link_to "Log out", destroy_user_session_path, method: :DELETE %>
+            </span>
+            <% end %>
+  </div>
+
+<% end %>
+
+
+<%= yield %>
+
+</body>
+</html>
