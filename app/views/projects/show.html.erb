@@ -5,9 +5,15 @@
   <%= @project.name %>
 </p>
 
+<% if false %>
 <%= link_to 'You need to create some issues in your project', new_project_issue_path(@project) %>
+
+<% end %>
+
+<%= link_to "Create a new issue for your project", new_user_project_issue_path(:project_id => @project.id, :user_id => @user.id)%>
+
+
 
 <hr>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
