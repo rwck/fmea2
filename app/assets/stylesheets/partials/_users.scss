@@ -1,0 +1,23 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.person_picture {
+  max-width: 200px;
+  max-height: 200px;
+  @include my-box-shadow;
+}
+
+.list_picture {
+  max-width: 100px;
+  max-height: 100px;
+  @include my-box-shadow;
+}
+
+.show-page-image {
+  margin: 0.5em;
+}
+
+.table_cell {
+  text-align: left;
+}

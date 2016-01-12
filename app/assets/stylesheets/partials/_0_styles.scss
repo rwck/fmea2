@@ -1,0 +1,154 @@
+$my-heading-font-family: 'Bitter', serif;
+$my-base-font-family: 'Raleway', sans-serif;
+$box-colour: rgba(216,223,207,0.5);
+$border-colour: #398999;
+
+
+$my-base-font-colour: rgba(95,80,91,1.0);
+$my-base-font-colour: rgba(0,0,0,0.75);
+
+$my-heading-font-colour: #5f505b;
+$my-button-colour: #f5ead8;
+$my-nav-background: rgba(95,80,91,0.3);
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $my-nav-background;
+}
+
+.main-container {
+  margin: 0 0 3em;
+  // background-color: $my-nav-background;
+}
+
+.main-heading {
+  position: relative;
+
+  // margin: 5em 0 0;
+  padding: 0 2em;
+}
+
+@mixin my-box-shadow {
+  background: $box-colour;
+  border: 1px solid #979797;
+  box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.50);
+}
+
+@mixin heading-style {
+  font-style: $my-base-font-family;
+  font-size: 1em;
+  padding: 2em;
+}
+
+@mixin basic-style {
+  font-style: $my-base-font-family;
+  position: relative;
+  // right: 1em;
+  // left: 1em;
+  font-size: 1em;
+  padding: 0.5em;
+  margin: 1em;
+  min-height: 75vh;
+  @include my-box-shadow;
+  // background-color: $my-base-font-colour;
+}
+
+.nav {
+  margin: 0;
+  padding: 1em;
+}
+
+p {
+  font-family: $my-base-font-family;
+  color: $my-base-font-colour;
+}
+
+.message-to-user {
+  @extend p;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.edge {
+  font-family: $my-base-font-family;
+  background-color: $box-colour;
+  @include my-box-shadow;
+
+  // display: inline-block;
+  position: relative;
+  right: 0;
+  left: 0;
+  height: 4em;
+}
+
+.edge-right {
+  display: inline-block;
+  position: absolute;
+  right: 1em;
+  top: 1.5em;
+}
+
+.edge-left {
+  display: inline-block;
+  position: absolute;
+  left: 1em;
+  top: 1.5em;
+}
+
+.basic-style {
+  @include basic-style;
+}
+
+th {
+  font-family: $my-heading-font-family;
+  padding: 0.5em;
+  text-align: left;
+}
+
+td {
+  @extend .basic-style;
+  font-family: $my-base-font-family;
+}
+
+h1 {
+  color: $my-base-font-colour;
+  font-family: $my-heading-font-family;
+}
+
+h2 {
+  @extend h1;
+  font-size: 1.2em;
+}
+
+a {
+  font-family: $my-base-font-family;
+  opacity: 1;
+}
+
+.main {
+  margin: 0.5em;
+  padding: 0.5em;
+  background-image: url("http://i.imgur.com/CjdytMM.png");
+  background-size: cover;
+}
+
+.link {
+  clear: both;
+  position: absolute;
+  background-color: $my-button-colour;
+  @include my-box-shadow;
+  padding: 1em;
+  margin: 1.5em 0;
+}
+
+
+table {
+  background-image: url("http://i.imgur.com/dGOVu3V.png");
+  background-size: cover;
+  min-width: 80%;
+  margin: 0 auto;
+}

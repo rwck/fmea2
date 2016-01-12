@@ -1,0 +1,126 @@
+label {
+  font-family: $my-base-font-family;
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+.field {
+  padding: 0.5em 0;
+  position: relative;
+}
+
+.actions {
+  position: relative;
+
+  // margin: 0;
+  // padding: 0.5em;
+  // position: relative;
+  // padding: 1.5em;
+}
+
+input {
+  font-family: 'Cutive Mono';
+  min-width: 80%;
+  margin: 0 auto;
+  border: 1px solid $border-colour;
+}
+
+input[placeholder] {
+  text-align: right;
+}
+
+input[type=text] {
+  padding: 0.5em;
+}
+
+
+.sign-up-form input[type=text] {
+  text-align: right;
+  padding: 0.5em;
+}
+
+input[type=email] {
+  padding: 0.5em;
+}
+
+input[type=password] {
+  padding: 0.5em;
+}
+
+input[type=number] {
+  padding: 0.5em;
+}
+
+input[type=checkbox].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left: 25px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -20px;
+}
+
+label.css-label {
+  background-image: url("http://csscheckbox.com/checkboxes/u/csscheckbox_9ac4da03ea4e8cbedd45f56b8132b6b5.png");
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label.css-label {
+  padding-left: 200;
+}
+
+input[type="checkbox"] {
+  text-align: left;
+  height: 50px;
+}
+
+.remember-me-box {
+  text-align: center;
+}
+
+
+input[type=submit] {
+  font-family: $my-base-font-family;
+  padding: 0.5em;
+  margin: 1em;
+  // border: 1px solid $border-colour;
+  @include my-box-shadow;
+  background-color: $my-button-colour;
+}
+
+#error_explanation {
+  ul {
+    list-style-type: none;
+    li {
+      font-style: $my-base-font-family;
+      color: red;
+      font-size: 1em;
+      padding: 0.5em;
+    }
+  }
+}

@@ -23,6 +23,20 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    resources :issues
+  end
+
+  authenticate :user do
+    resources :users do
+      resources :issues
+    end
+  end
+
+  # resources :projects do
+  #   resources :issues
+  # end
+
   # resources :issues
   #
   # resources :users

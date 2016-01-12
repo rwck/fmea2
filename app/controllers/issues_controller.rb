@@ -11,7 +11,10 @@ class IssuesController < ApplicationController
     # @issues = @project.issues.all
 
     # This shows only the issues belonging to projects belonging to the current user.
-    @issues = Issue.joins(:project).where('projects.user_id': current_user.id)
+    @issues = Issue.order(risk_level: :desc).joins(:project).where('projects.user_id': current_user.id)
+
+    # @issues = Issue.joins(:project).where('projects.user_id': current_user.id)
+    #
     @project = @project
   end
 
@@ -31,7 +34,6 @@ class IssuesController < ApplicationController
   def edit
     @issue = Issue.find(params['id'])
     @user = current_user
-    @project = @project
   end
 
   # POST /issues
