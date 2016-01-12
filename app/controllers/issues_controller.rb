@@ -12,7 +12,7 @@ class IssuesController < ApplicationController
 
     # This shows only the issues belonging to projects belonging to the current user.
 
-    @issues = Issue.order(risk_level: :desc).joins(:project).where('projects.user_id' => current_user.id)
+    @issues = Issue.order(risk_level: :desc).joins(:project).where('projects.user_id': current_user.id)
 
     # @issues = Issue.joins(:project).where('projects.user_id': current_user.id)
     #
